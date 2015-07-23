@@ -1,0 +1,27 @@
+/*!
+Theme Name: Berea 2015 - Department Child Theme
+Template: bc-wp-2015
+Author: Berea College
+Author URI: http://www.berea.edu
+Description: A refresh of the Berea College website, implemented in 2015.
+Version: 0.1
+License: GNU General Public License
+License URI: license.txt
+Text Domain: berea
+Domain Path: /library/languages/
+Tags: white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready, accessibility-ready
+
+This theme began its existence as Some Like it Neat, a simple yet advanced Starter Theme built using _S,
+Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io).
+
+=========================
+ Don't put CSS in here!
+=========================
+
+This file is only in your theme folder for WordPress to recognize basic theme data like name and version.
+CSS Rules in this file will not be used by the theme.
+
+We're using SASS to generate the real CSS files, and Gulp (or SASS watch) to do the actual builds. The
+/assets directory contains the SASS sources, generated CSS, and JS files associated with this theme.
+
+*/
