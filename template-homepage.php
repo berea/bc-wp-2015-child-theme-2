@@ -10,97 +10,41 @@
 
 get_header(); ?>
 
+<div class="homepage-slider-dept"></div><!-- .homepage-slider -->
+
+
         <div id="primary" class="content-area">
 
+            <main id="main" class="site-main" role="main">
 
+                <div id="homepage-central-content-block">
 
-            <div class="homepage-slider">
+                    <?php
 
-            </div><!-- .homepage-slider -->
+                        echo "<div class=\"menu-block-wrapper\">\n";
 
+                        $output = berea_get_default_menu();
 
-                <main id="main" class="site-main" role="main">
- 
-                        <div id="homepage-central-content-block">
+                        foreach ($output as $col => $vals) {
 
-                            <?php $args = array(
-                                'order'                  => 'ASC',
-                                'orderby'                => 'menu_order',
-                                'post_type'              => 'nav_menu_item',
-                                'post_status'            => 'publish',
-                                'output'                 => ARRAY_A,
-                                'output_key'             => 'menu_order',
-                                'nopaging'               => true,
-                                'update_post_term_cache' => false );
+                            echo "<div class=\"menu-block\">\n<ul>\n";
 
-                            $menu = "Default";
-
-                            $menu_items = wp_get_nav_menu_items( $menu, $args );
-
-                            $output = array();
-
-                            $column = 0;
-                            $column_limit = 4;
-                            $item = 0;
-                            $item_limit = 4;
-
-                            foreach ($menu_items as $menu_item) {
-
-                                // Increment item counter, because we just got a new item.
-                                $item++;
-
-                                // Check for new column. This is signified by $menu_item->menu_item_parent = 0.
-                                // If it's a new one, increment $column and reset $item.
-                                if ($menu_item->menu_item_parent == 0) {
-                                    $column++;
-                                    $item = 0;
-                                }
-                                if ($column < $column_limit) {
-                                    // This is a column we should display.
-
-                                    if ($item < $item_limit) {
-                                        // Less than item max, display it.
-                                        $output[$column][] = $menu_item->ID . ': ' . $menu_item->title . ', parent: ' . $menu_item->menu_item_parent;
-
-                                    }
-                                    else {
-                                        // Greater than item_max, don't display it.
-
-                                    }
-
-                                }
-                                else {
-                                    // This is not a column we should display.
-
-                                }
-
+                            foreach ($vals as $key => $val) {
+                                echo "<li>" . $val . "</li>\n";
                             }
 
+                            echo "</ul>\n</div>\n";
 
-                            echo "<div class=\"dept-hp-menu-wrapper\">\n";
+                        }
 
-                            foreach ($output as $col => $vals) {
+                        echo "</div>\n";
 
-                                echo '<div class="col' . $col . "\">\n<ul>\n";
+                    ?>
 
-                                foreach ($vals as $key => $val) {
-                                    echo "<li>" . $val . "</li>\n";
-                                }
+                </div><!-- #homepage-central-content-block -->
 
-                                echo "</ul>\n</div>\n";
+            </main><!-- #main -->
 
-                            }
-
-                            echo "</div>\n";
-
-                            ?>
-
-
-
-
-                        </div><!-- #homepage-central-content-block -->
-
-                </main><!-- #main -->
         </div><!-- #primary -->
 
 <?php get_footer(); ?>
