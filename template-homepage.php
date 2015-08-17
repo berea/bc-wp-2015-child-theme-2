@@ -20,11 +20,11 @@ get_header(); ?>
 
      $output = berea_get_default_menu();
 
-                            echo "<div class=\"dept-hp-menu-wrapper\">\n";
+                            echo "<div class=\"menu-block-wrapper\">\n";
 
                             foreach ($output as $col => $vals) {
 
-                                echo '<div class="col' . $col . "\">\n<ul>\n";
+                                echo "<div class=\"menu-block\">\n<ul>\n";
 
                                 foreach ($vals as $key => $val) {
                                     echo "<li>" . $val . "</li>\n";
@@ -37,6 +37,17 @@ get_header(); ?>
                             echo "</div>\n";
 
                             ?>
+
+     <?php
+     if (have_posts()) :
+         while (have_posts()) :
+             the_post();
+             the_content();
+         endwhile;
+     endif;
+     ?>
+
+
 
                         </div><!-- #homepage-central-content-block -->
 
