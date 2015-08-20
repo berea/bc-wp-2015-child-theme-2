@@ -36,9 +36,15 @@ get_header(); ?>
 
                             echo "</div>\n";
 
+
+
+
                             ?>
 
-     <?php
+                            <div class="user-entered-content">
+
+
+                            <?php
      if (have_posts()) :
          while (have_posts()) :
              the_post();
@@ -47,6 +53,8 @@ get_header(); ?>
      endif;
      ?>
 
+
+                            </div>
 
 
                         </div><!-- #homepage-central-content-block -->
