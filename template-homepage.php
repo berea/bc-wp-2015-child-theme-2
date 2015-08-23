@@ -41,7 +41,7 @@ get_header(); ?>
 
                             ?>
 
-                            <div class="user-entered-content">
+                            <div class="entry-content">
 
 
                             <?php
