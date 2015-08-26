@@ -61,9 +61,6 @@ get_header(); ?>
 
                 </main><!-- #main -->
                 
-                <!-- site-main-footer-shim -->
-                <div id="main-footer-shim" class="site-main-footer-shim"></div>
-                
         </div><!-- #primary -->
 
 <?php get_footer(); ?>
