@@ -8,3 +8,7 @@
         <h1 style=""><?php echo get_bloginfo('name'); ?></h1>
     </div>
 </div>
+
+
+
+<!--- more comments to force file to be copied again! -->
