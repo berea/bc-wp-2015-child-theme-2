@@ -18,27 +18,6 @@ get_header(); ?>
 
      <?php
 
-     $output = berea_get_default_menu();
-
-        echo "<div class=\"menu-block-wrapper\">\n";
-
-        foreach ($output as $col => $vals) {
-
-            echo "<div class=\"menu-block\">\n<ul>\n";
-
-            foreach ($vals as $key => $val) {
-                echo "<li>" . $val . "</li>\n";
-            }
-
-            echo "</ul>\n</div>\n";
-
-        }
-
-        echo "</div>\n";
-
-
-
-
         ?>
 
         <div class="entry-content">
